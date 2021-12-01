@@ -3,12 +3,22 @@
  */
 package dev.tahar;
 
+import dev.tahar.puzzle.Day1;
+
+import java.util.List;
+
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        final var days = List.of(new Day1());
+
+        for (int i = 0; i < days.size(); ++i) {
+            final var day = days.get(i);
+
+            System.out.printf("=== DAY %d ===\n", i);
+            System.out.printf("1)\t%s%n\n", day.executePartOne());
+            System.out.printf("2)\t%s%n\n\n", day.executePartTwo());
+        }
     }
+
 }
