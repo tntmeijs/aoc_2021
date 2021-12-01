@@ -26,7 +26,24 @@ public final class Day1 extends BasePuzzle {
 
     @Override
     public String executePartTwo() {
-        return "";
+        int numLargerThanPrevious = 0;
+        Integer previousSum = null; // Initial state is always invalid
+
+        for (int i = 0; i < puzzleInput.size() - 2; ++i) {
+            final var rollingWindow0 = Integer.parseInt(puzzleInput.get(i));
+            final var rollingWindow1 = Integer.parseInt(puzzleInput.get(i + 1));
+            final var rollingWindow2 = Integer.parseInt(puzzleInput.get(i + 2));
+
+            final var sum = rollingWindow0 + rollingWindow1 + rollingWindow2;
+
+            if (previousSum != null && sum > previousSum) {
+                ++numLargerThanPrevious;
+            }
+
+            previousSum = sum;
+        }
+
+        return String.format("Encountered %d sums larger than the previous one", numLargerThanPrevious);
     }
 
 }
