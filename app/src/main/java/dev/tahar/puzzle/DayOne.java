@@ -8,7 +8,7 @@ public final class DayOne extends BasePuzzle<Integer> {
      * Create a new puzzle solver for day one
      */
     public DayOne() {
-        super(PuzzleDay.ONE, "Sonar Sweep", Integer.class, Integer::parseInt);
+        super(PuzzleDay.ONE, "Sonar Sweep", Integer::parseInt);
     }
 
     /**
