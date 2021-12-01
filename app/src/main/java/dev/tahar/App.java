@@ -3,19 +3,19 @@
  */
 package dev.tahar;
 
-import dev.tahar.puzzle.Day1;
+import dev.tahar.puzzle.DayOne;
 
 import java.util.List;
 
 public class App {
 
     public static void main(String[] args) {
-        final var days = List.of(new Day1());
+        final var days = List.of(new DayOne());
 
         for (int i = 0; i < days.size(); ++i) {
             final var day = days.get(i);
 
-            System.out.printf("=== DAY %d ===\n", i);
+            System.out.printf("=== DAY %d: %s ===\n", i, day.getTitle());
             System.out.printf("1)\t%s%n\n", day.executePartOne());
             System.out.printf("2)\t%s%n\n\n", day.executePartTwo());
         }

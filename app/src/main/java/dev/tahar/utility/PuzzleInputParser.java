@@ -8,8 +8,17 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Utility class to help simplify loading puzzle input from disk
+ */
 public final class PuzzleInputParser {
 
+    /**
+     * Load a puzzle's input from disk by puzzle day index
+     *
+     * @param day Day index (1-based)
+     * @return {@link List} with puzzle input
+     */
     public List<String> loadInput(final int day) {
         final var path = String.format("/%d.txt", day);
         final var resource = Optional.ofNullable(this.getClass().getResourceAsStream(path));

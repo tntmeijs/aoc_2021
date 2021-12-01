@@ -1,9 +1,9 @@
 package dev.tahar.puzzle;
 
-public final class Day1 extends BasePuzzle {
+public final class DayOne extends BasePuzzle {
 
-    public Day1() {
-        super(1, "Sonar Sweep");
+    public DayOne() {
+        super(PuzzleDay.ONE, "Sonar Sweep");
     }
 
     @Override
