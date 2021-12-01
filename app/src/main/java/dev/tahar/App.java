@@ -16,8 +16,8 @@ public class App {
             final var day = days.get(i);
 
             System.out.printf("=== DAY %d: %s ===\n", i, day.getTitle());
-            System.out.printf("1)\t%s%n\n", day.executePartOne());
-            System.out.printf("2)\t%s%n\n\n", day.executePartTwo());
+            System.out.printf("1)\t%s\n", day.executePartOne());
+            System.out.printf("2)\t%s\n\n", day.executePartTwo());
         }
     }
 
