@@ -3,11 +3,14 @@ package dev.tahar.puzzle;
 import dev.tahar.utility.PuzzleInputParser;
 
 import java.util.List;
+import java.util.function.Function;
 
 /**
  * Base class for all puzzles, provides common puzzle functionality
+ *
+ * @param <InputType> This is the type used to interpret the input file's puzzle data
  */
-public abstract class BasePuzzle {
+public abstract class BasePuzzle<InputType> {
 
     /**
      * Title of the puzzle
@@ -17,17 +20,19 @@ public abstract class BasePuzzle {
     /**
      * Input of the puzzle
      */
-    protected final List<String> puzzleInput;
+    protected final List<InputType> puzzleInput;
 
     /**
      * Construct a new {@link BasePuzzle}
      *
-     * @param day   The day this puzzle belongs to
-     * @param title Title of the puzzle
+     * @param day       The day this puzzle belongs to
+     * @param title     Title of the puzzle
+     * @param inputType This is the type used to interpret the input file's puzzle data
+     * @param cast      Function to cast the input into {@link InputType}
      */
-    public BasePuzzle(final PuzzleDay day, final String title) {
+    public BasePuzzle(final PuzzleDay day, final String title, final Class<InputType> inputType, Function<String, InputType> cast) {
         this.title = title;
-        puzzleInput = new PuzzleInputParser().loadInput(day.ordinal());
+        puzzleInput = new PuzzleInputParser<>(inputType).loadInput(day, cast);
     }
 
     /**
