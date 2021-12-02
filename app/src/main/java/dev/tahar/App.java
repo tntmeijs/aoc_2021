@@ -3,7 +3,7 @@
  */
 package dev.tahar;
 
-import dev.tahar.puzzle.DayOne;
+import dev.tahar.puzzle.day.one.DayOne;
 import dev.tahar.puzzle.day.two.DayTwo;
 
 import java.util.List;

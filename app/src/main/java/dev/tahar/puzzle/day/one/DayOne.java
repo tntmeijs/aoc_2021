@@ -1,4 +1,7 @@
-package dev.tahar.puzzle;
+package dev.tahar.puzzle.day.one;
+
+import dev.tahar.puzzle.BasePuzzle;
+import dev.tahar.puzzle.PuzzleDay;
 
 import java.util.Arrays;
 
