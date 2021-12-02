@@ -4,13 +4,14 @@
 package dev.tahar;
 
 import dev.tahar.puzzle.DayOne;
+import dev.tahar.puzzle.day.two.DayTwo;
 
 import java.util.List;
 
 public class App {
 
     public static void main(String[] args) {
-        final var days = List.of(new DayOne());
+        final var days = List.of(new DayOne(), new DayTwo());
 
         for (int i = 0; i < days.size(); ++i) {
             final var day = days.get(i);
