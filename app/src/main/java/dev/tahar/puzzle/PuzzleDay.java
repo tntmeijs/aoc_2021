@@ -1,7 +1,7 @@
 package dev.tahar.puzzle;
 
 /**
- * Indicates the day of a puzzle - this value is used to determine which puzzle input source to load from disk
+ * Indicates the day of a puzzle - this number is used to determine which puzzle input source to load from disk
  * <p>
  * Please note that the order of the enum's values matter <i>a lot</i>. The order in which the values are declared, is
  * the order in which they will be mapped to the 1st of December until the 25th of December.

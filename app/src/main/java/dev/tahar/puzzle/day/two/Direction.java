@@ -23,10 +23,10 @@ public enum Direction {
     UP;
 
     /**
-     * Convert a string into a valid {@link Direction} value
+     * Convert a string into a valid {@link Direction} number
      *
      * @param direction String to convert
-     * @return {@link Optional} {@link Direction}, {@link Optional#empty()} if the function failed to convert the value
+     * @return {@link Optional} {@link Direction}, {@link Optional#empty()} if the function failed to convert the number
      */
     public static Optional<Direction> from(final String direction) {
         if (direction.equalsIgnoreCase("forward")) {

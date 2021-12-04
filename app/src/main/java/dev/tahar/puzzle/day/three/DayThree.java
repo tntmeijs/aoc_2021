@@ -69,7 +69,7 @@ public class DayThree extends BasePuzzle<String> {
      *
      * @param bitSequences Bit sequence strings to process
      * @param ratingType   Rating type logic to apply
-     * @return Rating value
+     * @return Rating number
      */
     private String reduceUntilRatingFound(final List<String> bitSequences, final RatingType ratingType) {
         final var sequenceLength = bitSequences.get(0).length();
@@ -94,7 +94,7 @@ public class DayThree extends BasePuzzle<String> {
      * @param bitSequences Bit sequence strings to process
      * @param bitIndex     Bit index to filter
      * @param ratingType   Rating type logic to apply
-     * @return Rating value
+     * @return Rating number
      */
     private List<String> applyBitCriteria(final List<String> bitSequences, final int bitIndex, final RatingType ratingType) {
         final var mostCommonBit = findMostCommonBitAtIndex(bitSequences, bitIndex);
