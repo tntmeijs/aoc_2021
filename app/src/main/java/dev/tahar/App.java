@@ -3,6 +3,7 @@
  */
 package dev.tahar;
 
+import dev.tahar.puzzle.day.five.DayFive;
 import dev.tahar.puzzle.day.four.DayFour;
 import dev.tahar.puzzle.day.one.DayOne;
 import dev.tahar.puzzle.day.three.DayThree;
@@ -17,7 +18,8 @@ public class App {
                 new DayOne(),
                 new DayTwo(),
                 new DayThree(),
-                new DayFour());
+                new DayFour(),
+                new DayFive());
 
         for (int i = 0; i < days.size(); ++i) {
             final var day = days.get(i);
