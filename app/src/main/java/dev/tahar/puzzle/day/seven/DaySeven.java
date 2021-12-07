@@ -27,22 +27,18 @@ public class DaySeven extends BasePuzzle<List<Integer>> {
     public String executePartOne() {
         final var positions = puzzleInput.get(0);
 
-        int bestTotalFuel = Integer.MAX_VALUE;
+        // Most optimal position is the median of all crabs
+        int medianIndex = (int) Math.round(positions.size() / 2.0d);
+        int optimalPosition = positions.get(medianIndex);
 
-        for (int distance = 0; distance < positions.get(positions.size() - 1); ++distance) {
-            int totalFuel = 0;
+        // Calculate total fuel cost for all crabs
+        int fuel = 0;
 
-            // Determine fuel needed to move to the same position
-            for (final int crabPosition : positions) {
-                totalFuel += Math.abs(crabPosition - distance);
-            }
-
-            if (bestTotalFuel > totalFuel) {
-                bestTotalFuel = totalFuel;
-            }
+        for (final int crab : positions) {
+            fuel += Math.abs(crab - optimalPosition);
         }
 
-        return "Minimum amount of fuel needed: " + bestTotalFuel;
+        return "Minimum amount of fuel needed: " + fuel;
     }
 
     /**
@@ -60,7 +56,7 @@ public class DaySeven extends BasePuzzle<List<Integer>> {
             // Determine fuel needed to move to the same position
             for (final int crabPosition : positions) {
                 final int distanceToCover = Math.abs(crabPosition - distance);
-                
+
                 // Each step costs one unit more than the previous step
                 for (int step = 0; step < distanceToCover; ++step) {
                     totalFuel += step + 1;
