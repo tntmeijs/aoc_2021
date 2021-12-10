@@ -8,6 +8,7 @@ import dev.tahar.puzzle.day.four.DayFour;
 import dev.tahar.puzzle.day.one.DayOne;
 import dev.tahar.puzzle.day.seven.DaySeven;
 import dev.tahar.puzzle.day.six.DaySix;
+import dev.tahar.puzzle.day.ten.DayTen;
 import dev.tahar.puzzle.day.three.DayThree;
 import dev.tahar.puzzle.day.two.DayTwo;
 
@@ -23,7 +24,8 @@ public class App {
                 new DayFour(),
                 new DayFive(),
                 new DaySix(),
-                new DaySeven());
+                new DaySeven(),
+                new DayTen());
 
         for (int i = 0; i < days.size(); ++i) {
             final var day = days.get(i);
